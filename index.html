@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Evolução do Sharingan - Clã Uchiha</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header>
+
+        <div class="logo">
+            UCHIHA <span>写輪眼</span>
+        </div>
+
+        <div class="header-tag">
+            Evolução do Sharingan
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         PÁLPEBRAS
+    ====================================== -->
+
+    <div
+        id="palpebra-topo"
+        class="palpebra palpebra-topo"
+    ></div>
+
+    <div
+        id="palpebra-baixo"
+        class="palpebra palpebra-baixo"
+    ></div>
+
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="hero">
+
+        <div class="hero-badge">
+            Clã Uchiha
+        </div>
+
+
+        <h1>
+            Evolução do
+            <span>Sharingan</span>
+        </h1>
+
+
+        <p>
+            Acompanhe a evolução do olho Uchiha,
+            desde o estado inativo até suas formas
+            mais avançadas.
+        </p>
+
+
+        <div class="scroll-hint">
+
+            <div class="mouse-icon">
+
+                <div class="mouse-wheel"></div>
+
+            </div>
+
+            <span>
+                Desça para evoluir
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         OLHO FIXO
+    ====================================== -->
+
+    <div class="eye-wrapper">
+
+        <div class="eye-container">
+
+
+            <!-- FUNDO DA ÍRIS -->
+
+            <div class="iris-bg"></div>
+
+
+
+            <!-- =================================
+                 OLHO INATIVO
+            ================================== -->
+
+            <div
+                id="p-comum"
+                class="pattern-layer inactive-sharingan"
+            >
+
+                <svg
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <defs>
+
+                        <radialGradient
+                            id="inactiveGradient"
+                            cx="50%"
+                            cy="50%"
+                            r="50%"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#777"
+                            />
+
+                            <stop
+                                offset="65%"
+                                stop-color="#444"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#111"
+                            />
+
+                        </radialGradient>
+
+                    </defs>
+
+
+                    <!-- BORDA DO OLHO -->
+
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="47"
+                        fill="url(#inactiveGradient)"
+                        stroke="#050505"
+                        stroke-width="3"
+                    />
+
+
+                    <!-- CÍRCULO INTERNO -->
+
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="35"
+                        fill="none"
+                        stroke="#222"
+                        stroke-width="1.5"
+                        opacity="0.7"
+                    />
+
+
+                    <!-- CÍRCULO CENTRAL -->
+
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="9"
+                        fill="#050505"
+                    />
+
+                </svg>
+
+            </div>
+
+
+
+            <!-- =================================
+                 1 TOMOE
+            ================================== -->
+
+            <div
+                id="p-t1"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 2 TOMOES
+            ================================== -->
+
+            <div
+                id="p-t2"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 3 TOMOES
+            ================================== -->
+
+            <div
+                id="p-t3"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 MANGEKYŌ MADARA
+            ================================== -->
+
+            <div
+                id="p-madara"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 MANGEKYŌ ITACHI
+            ================================== -->
+
+            <div
+                id="p-itachi"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 MANGEKYŌ SASUKE
+            ================================== -->
+
+            <div
+                id="p-sasuke"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 MANGEKYŌ OBITO
+            ================================== -->
+
+            <div
+                id="p-obito"
+                class="pattern-layer"
+            ></div>
+
+
+
+            <!-- =================================
+                 MANGEKYŌ SARADA
+            ================================== -->
+
+            <div
+                id="p-sarada"
+                class="pattern-layer"
+            ></div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         CONTEÚDO
+    ====================================== -->
+
+    <main class="content">
+
+
+        <!-- =================================
+             1. INATIVO
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 01
+                </div>
+
+                <h2>
+                    Sharingan Inativo
+                </h2>
+
+                <div class="subtitle">
+                    Antes do despertar
+                </div>
+
+                <p class="description">
+                    O olho ainda não apresenta as marcas
+                    características do Sharingan.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>●</span>
+                        Estado inicial
+                    </div>
+
+                    <div class="power">
+                        Percepção normal
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             2. 1 TOMOE
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 02
+                </div>
+
+                <h2>
+                    1 Tomoe
+                </h2>
+
+                <div class="subtitle">
+                    Primeiro despertar
+                </div>
+
+                <p class="description">
+                    O primeiro tomoe surge no olho,
+                    marcando o despertar inicial do Sharingan.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>●</span>
+                        Percepção aprimorada
+                    </div>
+
+                    <div class="power">
+                        Rastreamento visual
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             3. 2 TOMOES
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 03
+                </div>
+
+                <h2>
+                    2 Tomoes
+                </h2>
+
+                <div class="subtitle">
+                    Evolução do Sharingan
+                </div>
+
+                <p class="description">
+                    Um segundo tomoe aparece,
+                    aumentando a capacidade de percepção
+                    e leitura dos movimentos.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>●</span>
+                        Reflexos aprimorados
+                    </div>
+
+                    <div class="power">
+                        Leitura de movimentos
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             4. 3 TOMOES
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 04
+                </div>
+
+                <h2>
+                    3 Tomoes
+                </h2>
+
+                <div class="subtitle">
+                    Sharingan completo
+                </div>
+
+                <p class="description">
+                    Os três tomoes estão completamente
+                    despertos, representando a forma
+                    clássica e completa do Sharingan.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>●</span>
+                        Percepção avançada
+                    </div>
+
+                    <div class="power">
+                        Cópia de movimentos
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             5. MADARA
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 05
+                </div>
+
+                <h2>
+                    Mangekyō de Madara
+                </h2>
+
+                <div class="subtitle">
+                    Mangekyō Sharingan
+                </div>
+
+                <p class="description">
+                    Uma evolução avançada do Sharingan,
+                    representada pelo padrão característico
+                    associado a Madara.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>◆</span>
+                        Mangekyō
+                    </div>
+
+                    <div class="power">
+                        Técnicas especiais
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             6. ITACHI
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 06
+                </div>
+
+                <h2>
+                    Mangekyō de Itachi
+                </h2>
+
+                <div class="subtitle">
+                    Mangekyō Sharingan
+                </div>
+
+                <p class="description">
+                    O padrão do Mangekyō associado a Itachi,
+                    com seu desenho característico.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>◆</span>
+                        Mangekyō
+                    </div>
+
+                    <div class="power">
+                        Genjutsu
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             7. SASUKE
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 07
+                </div>
+
+                <h2>
+                    Mangekyō de Sasuke
+                </h2>
+
+                <div class="subtitle">
+                    Mangekyō Sharingan
+                </div>
+
+                <p class="description">
+                    O padrão característico do Mangekyō
+                    Sharingan de Sasuke.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>◆</span>
+                        Mangekyō
+                    </div>
+
+                    <div class="power">
+                        Técnicas especiais
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             8. OBITO
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 08
+                </div>
+
+                <h2>
+                    Mangekyō de Obito
+                </h2>
+
+                <div class="subtitle">
+                    Mangekyō Sharingan
+                </div>
+
+                <p class="description">
+                    O padrão associado ao Mangekyō
+                    utilizado por Obito.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>◆</span>
+                        Mangekyō
+                    </div>
+
+                    <div class="power">
+                        Espaço-tempo
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             9. SARADA
+        ================================== -->
+
+        <section class="step">
+
+            <div class="info-card">
+
+                <div class="stage">
+                    Estágio 09
+                </div>
+
+                <h2>
+                    Mangekyō de Sarada
+                </h2>
+
+                <div class="subtitle">
+                    Mangekyō Sharingan
+                </div>
+
+                <p class="description">
+                    O padrão apresentado para o Mangekyō
+                    Sharingan de Sarada.
+                </p>
+
+                <div class="powers">
+
+                    <div class="power">
+                        <span>◆</span>
+                        Mangekyō
+                    </div>
+
+                    <div class="power">
+                        Habilidades próprias
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            Sharingan Evolution • Clã Uchiha
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
